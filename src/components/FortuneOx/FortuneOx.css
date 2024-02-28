@@ -1,0 +1,152 @@
+/* FortuneOx.css */
+
+.fortune-ox-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black; /* Fundo preto para melhor contraste */
+  background-size: cover;
+}
+
+.fortune-ox-container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais opaco para melhor contraste */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efeito de elevação */
+  color: white; /* Texto branco para melhor legibilidade */
+}
+
+.fortune-ox-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.fortune-ox-float-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Caixa mais transparente para fundo preto */
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #fff; /* Borda branca para definição */
+}
+
+.fortune-ox-entrada-text,
+.fortune-ox-info-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Cor do texto para branco */
+  margin-bottom: 10px;
+  white-space: pre-line;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
+}
+
+.fortune-ox-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.fortune-ox-spin-button {
+  animation: spin 2s linear infinite;
+}
+
+.fortune-ox-button-image {
+  display: block;
+}
+
+.fortune-ox-button-spin {
+  animation: spin 5s linear infinite;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 50px;
+  height: 50px;
+}
+
+.probabilidade-info {
+  display: block;
+  align-items: center;
+  margin-left: 20px;
+  color: white; /* Cor do texto para branco */
+}
+
+.alerta-probabilidade-baixa {
+  color: red; /* Mantém a cor vermelha para alertas */
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.probabilidade-texto,
+.probabilidade-faixa {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Cor do texto para branco */
+  margin-bottom: 10px;
+}
+
+.probabilidade-alta {
+  color: limegreen; /* Cor verde mais viva para alta probabilidade */
+}
+
+.probabilidade-media {
+  color: gold; /* Cor dourada para probabilidade média */
+}
+
+.probabilidade-baixa {
+  color: red; /* Mantém a cor vermelha para baixa probabilidade */
+}
+
+.aviso {
+  color: red; /* Mantém a cor vermelha para avisos */
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.fortune-ox-loading {
+  color: white; /* Cor do texto para branco */
+  font-weight: bold;
+}
+
+.fortune-ox-webview {
+  width: 85%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: -30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .fortune-ox-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fortune-ox-container {
+    width: 100%;
+    padding: 15px;
+  }
+}

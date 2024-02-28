@@ -1,0 +1,16 @@
+/* HeaderLogo.css */
+.headerLogo-container {
+  width: 100%; /* Isso faz com que o elemento ocupe toda a largura disponível */
+  height: 60px; /* Ajuste conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 10px; /* Ajuste conforme necessário, removido o cálculo específico do Android */
+  margin-top: 20px;
+}
+
+.headerLogo-logo {
+  width: auto;
+  height: 80px;
+}

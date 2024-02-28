@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/mega-roulette",
+      "destination": "http://54.39.112.34:5000/api/mega-roulette"
+    },
+    {
+      "source": "/api/football-studio",
+      "destination": "http://54.39.112.34:5000/api/football-studio"
+    }
+  ]
+}

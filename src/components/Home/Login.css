@@ -1,0 +1,159 @@
+/* Login.css */
+
+.login-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #111; /* Fundo mais escuro para melhor contraste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5); /* Sombra suave para profundidade */
+  max-width: 450px; /* Largura máxima do container */
+  width: 100%; /* Largura baseada no viewport */
+}
+
+.login-logo {
+  width: 250px; /* Reduzindo o tamanho da logo */
+  height: auto; /* Altura automática para manter proporção */
+  margin-bottom: 1rem;
+}
+
+.app-description {
+  color: #FFD700; /* Dourado para destaque */
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-input {
+  width: calc(100% - 2rem); /* 100% da largura do container menos o padding */
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparência para os inputs */
+  color: #FFF; /* Cor branca para o texto */
+  border: 1px solid #FFD700; /* Borda dourada */
+  border-radius: 5px;
+}
+
+.login-button {
+  width: calc(100% - 2rem); /* 100% da largura do container menos o padding */
+  padding: 0.75rem;
+  border: 2px solid #FFD700; /* Borda dourada */
+  background: transparent; /* Fundo transparente */
+  color: #FFD700; /* Texto dourado */
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #FFD700; /* Fundo dourado ao passar o mouse */
+  color: #000; /* Texto preto ao passar o mouse */
+}
+
+.login-footer {
+  color: #FFF; /* Cor branca para o texto */
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.login-error {
+  color: #e74c3c; /* Cor vermelha para mensagens de erro */
+  margin-top: 1rem;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ffd700;
+  width: 36px;
+  height: 36px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes movingGradient {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 100% 70%;
+  }
+  100% {
+    background-position: 0% 80%;
+  }
+}
+
+.animated-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #ffd700,
+    #ffffff
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: movingGradient 3s linear infinite;
+}
+
+/* Adicione essa classe ao seu elemento de texto no HTML */
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-input, .login-button {
+    width: 100%; /* Ajustando a largura no mobile para ocupar todo o espaço disponível */
+  }
+
+  .login-logo {
+    width: 200px; /* Reduzindo mais a logo para dispositivos móveis */
+  }
+}

@@ -1,0 +1,137 @@
+/* Mines.css */
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: black; /* Fundo preto para melhor contraste */
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.75); /* Aumento da transparência para o fundo */
+  border-radius: 20px;
+  color: white; /* Cor do texto ajustada para branco */
+}
+
+.logo, .mines-logo {
+  width: auto; /* Mantém a largura proporcional à altura */
+  height: 100px; /* Altura fixa para manter proporção */
+  margin-bottom: 20px;
+  object-fit: contain; /* Garante que o logo não fique distorcido */
+}
+
+.info-container {
+  margin-bottom: 20px;
+}
+
+.text-box {
+  background-color: rgba(255, 255, 255, 0.2); /* Caixa mais transparente para fundo preto */
+  color: white; /* Cor do texto para branco */
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 5px;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.card {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #0043e4; /* Mantém a cor mas adiciona sombra para destaque */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de caixa para destaque */
+}
+
+.circle, .star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hack-button {
+  background-color: #e74c3c; /* Cor vermelha mais vibrante */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Suaviza a transição de cor */
+}
+
+.hack-button:hover,
+.hack-button:focus {
+  background-color: #c0392b; /* Cor mais escura ao interagir */
+}
+
+.hack-button:disabled {
+  background-color: #3498db; /* Cor azul clara para estado desativado */
+}
+
+.loading {
+  color: white;
+  font-weight: bold;
+}
+
+.web-view {
+  width: 85%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: -30px;
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px; /* Maior espaço interno para conforto visual */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 5px; /* Ajuste para telas menores */
+  }
+}

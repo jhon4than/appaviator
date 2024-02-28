@@ -1,0 +1,103 @@
+/* Tiger.css */
+
+.tiger-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: black; /* Fundo preto para melhor contraste */
+}
+
+.tiger-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.85); /* Aumento da transparência */
+  border-radius: 20px;
+  color: white; /* Cor do texto ajustada para branco */
+}
+
+.tiger-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.tiger-float-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Caixa mais transparente */
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #fff; /* Borda branca para definição */
+}
+
+.tiger-entrada-text, .tiger-info-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Cor do texto para branco */
+  margin-bottom: 15px;
+  display: block;
+  white-space: pre-line;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
+}
+
+.tiger-button {
+  background-color: #e21818; /* Cor brilhante para chamar atenção */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+.tiger-button:hover,
+.tiger-button:focus {
+  background-color: #c62828; /* Cor mais escura ao interagir */
+}
+
+.tiger-disabled-button {
+  background-color: #3498db; /* Cor azul clara para estado desativado */
+}
+
+.tiger-loading {
+  color: white;
+  font-weight: bold;
+}
+
+.tiger-webview {
+  width: 85%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: -30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tiger-container {
+    width: 95%;
+    padding: 10px; /* Maior espaço interno para conforto visual */
+  }
+}
+
+@media (max-width: 480px) {
+  .tiger-container {
+    width: 100%;
+    padding: 5px; /* Ajuste para telas menores */
+  }
+
+  .tiger-entrada-text, .tiger-info-text {
+    font-size: 18px; /* Ajuste de tamanho de fonte para melhor leitura */
+  }
+}

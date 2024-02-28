@@ -1,0 +1,128 @@
+/* FootballStudio.css */
+
+.football-background {
+  background-color: black; /* Fundo preto aplicado */
+}
+
+.football-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.75); /* Fundo escurecido */
+  border-radius: 20px;
+  color: white; /* Texto branco para legibilidade */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+.results-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparência ajustada para fundo preto */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid #fff; /* Borda branca para destacar */
+}
+
+.results-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra no texto para realçar */
+}
+
+.hack-button-container {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.football-hack-button {
+  background-color: #f44336; /* Cor vermelha brilhante */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Suaviza a transição de cores */
+}
+
+.football-hack-button:hover,
+.football-hack-button:focus {
+  background-color: #c62828; /* Cor mais escura para interação */
+}
+
+.football-disabled-button {
+  background-color: #3498db; /* Cor azul claro para o estado desativado */
+}
+
+.football-loading {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.error-container {
+  background-color: rgba(255, 0, 0, 0.7); /* Erro de fundo mais suave */
+  padding: 20px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.loading-text, .error-text {
+  display: block;
+  margin-bottom: 5px;
+  color: white; /* Assegura que o texto é branco */
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+.result-item {
+  font-size: 24px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+}
+
+.football-webview {
+  width: 85%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: -30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .football-container {
+    width: 95%;
+    padding: 10px; /* Espaçamento interno ajustado */
+  }
+}
+
+@media (max-width: 480px) {
+  .football-container {
+    width: 100%;
+    padding: 5px; /* Espaçamento interno reduzido para telas pequenas */
+  }
+
+  .results-header, .loading-text, .error-text {
+    font-size: 18px; /* Tamanho de fonte ajustado para melhor legibilidade */
+  }
+}

@@ -1,0 +1,61 @@
+.tutorial-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Above other content */
+}
+
+.tutorial-content {
+  background-color: #353535; /* Solid gray background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: left; /* Align text to the left */
+}
+
+.close-button {
+  background: #f44336; /* Red background for contrast */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Ensure it doesn't flex */
+  margin-top: 20px;
+  margin-left: auto; /* Align to the right */
+}
+
+/* Additional styles for the close icon */
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: white; /* White color for the icon */
+  font-size: 24px; /* Larger size for the icon */
+}
+
+/* Style for the ordered list */
+.instruction-list {
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  counter-reset: step-counter; /* Create a counter for numbering */
+}
+
+.instruction-list li {
+  counter-increment: step-counter; /* Increment counter for each list item */
+  margin-bottom: 10px; /* Space between steps */
+}
+
+.instruction-list li::before {
+  content: counter(step-counter) ". "; /* Display the counter before the text */
+  font-weight: bold; /* Make the number bold */
+  color: #FFD700; /* Gold color for the numbers */
+}

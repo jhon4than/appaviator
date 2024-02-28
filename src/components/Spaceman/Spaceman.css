@@ -1,0 +1,214 @@
+/* Spaceman.css */
+
+.spaceman-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black; /* Fundo preto para melhor contraste */
+  background-size: cover;
+}
+
+.spaceman-container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais opaco para melhor contraste */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efeito de elevação */
+  color: white; /* Texto branco para melhor legibilidade */
+}
+
+.spaceman-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.spaceman-float-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Caixa mais transparente para fundo preto */
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #fff; /* Borda branca para definição */
+}
+
+.spaceman-entrada-text,
+.spaceman-info-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Cor do texto para branco */
+  margin-bottom: 10px;
+  white-space: pre-line;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
+}
+
+.spaceman-button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.spaceman-spin-button {
+  animation: spin 2s linear infinite;
+}
+
+.spaceman-button-image {
+  display: block;
+}
+
+.spaceman-button-spin {
+  animation: spin 5s linear infinite;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 50px;
+  height: 50px;
+}
+
+.probabilidade-info {
+  display: block;
+  align-items: center;
+  margin-left: 20px;
+  color: white; /* Cor do texto para branco */
+}
+
+.alerta-probabilidade-baixa {
+  color: red; /* Mantém a cor vermelha para alertas */
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.probabilidade-texto,
+.probabilidade-faixa {
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Cor do texto para branco */
+  margin-bottom: 10px;
+}
+
+.probabilidade-alta {
+  color: limegreen; /* Cor verde mais viva para alta probabilidade */
+}
+
+.probabilidade-media {
+  color: #39FF14; /* Cor dourada para probabilidade média */
+}
+
+.probabilidade-baixa {
+  color: red; /* Mantém a cor vermelha para baixa probabilidade */
+}
+
+.aviso {
+  color: red; /* Mantém a cor vermelha para avisos */
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.spaceman-loading {
+  color: white; /* Cor do texto para branco */
+  font-weight: bold;
+}
+
+.spaceman-webview {
+  width: 85%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-left: -30px;
+}
+
+
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh; /* Use a altura total da tela para centralização vertical */
+}
+
+.aviator-button {
+  display: flex;
+  align-items: center; /* Isso garantirá que o ícone e o texto estejam alinhados verticalmente */
+  justify-content: center; /* Isso centrará o conteúdo horizontalmente */
+  padding: 15px 30px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+  animation: colorShift 5s ease-in-out infinite, float 3s ease-in-out infinite;
+  align-self: center;
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: darkred;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.button-icon {
+  width: 24px; /* Ou o tamanho que você desejar para o ícone */
+  height: auto;
+  margin-right: 8px; /* Adicione espaço entre o ícone e o texto */
+}
+/* No seu arquivo Aviator.css */
+.aviator-button.hack-success {
+  background-color: #00C851; /* Um tom de verde */
+  /* Adicione mais estilos se necessário */
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .spaceman-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .spaceman-container {
+    width: 100%;
+    padding: 15px;
+  }
+}

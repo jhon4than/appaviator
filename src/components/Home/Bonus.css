@@ -1,0 +1,80 @@
+.bonus-page {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+  background-color: black;
+}
+
+
+.bonus-content {
+  text-align: center;
+  /* Removendo o fundo branco para mostrar a imagem de fundo total */
+  padding: 50px;
+  border-radius: 15px;
+  max-width: 600px; /* Você pode definir uma largura máxima se necessário */
+  margin: auto; /* Isso centra o conteúdo na página */
+}
+
+.bonus-image img {
+  max-width: 100%; /* Garante que a imagem seja responsiva */
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.bonus-buttons {
+  display: flex;
+  flex-direction: column; /* Organiza os botões em uma coluna */
+  gap: 20px; /* Espaço entre os botões */
+}
+
+.bonus-buttons button {
+  background-color: #007bff; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda */
+  padding: 15px 30px; /* Espaço interno */
+  margin: 0 auto; /* Centraliza os botões na página */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  font-size: 16px; /* Tamanho do texto */
+  transition: background-color 0.3s; /* Animação ao mudar de cor */
+  width: 80%; /* Largura relativa */
+  align-items: center; /* Alinha ícones e texto */
+  justify-content: center; /* Centraliza o conteúdo */
+  gap: 10px; /* Espaço entre ícone e texto */
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+
+.bonus-buttons button svg {
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.bonus-buttons button:hover {
+  background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .bonus-buttons button {
+    font-size: 14px; /* Reduz o tamanho do texto para dispositivos menores */
+    padding: 10px 20px; /* Reduz o padding */
+  }
+  
+  .bonus-buttons button svg {
+    font-size: 16px; /* Ajusta o tamanho do ícone */
+  }
+}
+
+/* Se a logo ainda estiver com problemas de exibição */
+.header-logo img {
+  width: 100%; /* Ajusta a largura da logo */
+  max-width: 200px; /* Limita o tamanho máximo da logo */
+  height: auto; /* Mantém as proporções */
+  margin-bottom: 20px; /* Espaço abaixo da logo */
+}

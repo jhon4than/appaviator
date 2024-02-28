@@ -1,0 +1,244 @@
+/* Games.css */
+.games-background {
+  background-color: black;
+  min-height: 100vh;
+  /* Use flexbox para garantir que o conteúdo preencha o espaço vertical */
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Games.css */
+
+.category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid #333; /* Cor cinza para o círculo */
+  color: white;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 50%; /* Isso cria o círculo */
+  text-align: center;
+  width: 50px; /* Tamanho fixo para o círculo */
+  height: 50px; /* Tamanho fixo para o círculo */
+  position: relative; /* Posição relativa para posicionar o texto corretamente */
+  margin-top: 20px;
+}
+
+.category-button svg {
+  font-size: 24px; /* Ajuste conforme necessário */
+}
+
+.category-button span {
+  position: absolute;
+  bottom: -25px; /* Ajuste para posicionar o texto abaixo do ícone */
+  width: 100px; /* Largura máxima do texto */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: block; /* Forçar o texto a ser um bloco para ocupar o espaço correto */
+  color: white; /* Cor do texto */
+}
+
+.category-button.active,
+.category-button:hover {
+  border-color: #ffd700; /* Cor amarela para o círculo ativo/hover */
+  background: rgba(0, 0, 0, 0.1); /* Fundo ligeiramente escuro para o efeito de profundidade */
+}
+
+.category-button.active svg,
+.category-button.active span,
+.category-button:hover svg,
+.category-button:hover span {
+  color: #ffd700; /* Cor dourada para o ícone e texto ativos/hover */
+}
+
+
+
+.games-available-title {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.game-payout {
+  color: #ffd700; /* Mantendo o payout dourado */
+  padding: 8px;
+  font-size: 16px; /* Aumentando o tamanho da fonte para destaque */
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para a barra de payout */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center; /* Centralizando o texto */
+}
+
+.game-name {
+  font-weight: bold;
+}
+
+.scroll-container {
+  overflow-y: auto;
+}
+
+.floating-text-box {
+  background-color: rgba(255, 215, 0, 0.1);
+  margin: 8px auto;
+  padding: 20px 8px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.floating-text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.floating-subtext {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* This should keep the cards responsive */
+  grid-auto-rows: minmax(100px, auto); /* Ensures all rows (and thus cards) have equal height */
+  gap: 16px;
+  padding: 10px;
+  margin-bottom: 60px; /* Ensures cards do not overlap with any bottom navigation or content */
+}
+
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ffd700;
+  /* Ensures the card does not shrink smaller than its content, preventing distortion */
+  min-height: 300px; /* Minimum height for the cards */
+}
+
+.game-header {
+  background: rgba(0, 0, 0, 0.9); /* Semi-transparência para ver a imagem por baixo */
+  color: #ffd700; /* Texto dourado */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 10;
+}
+
+.game-img {
+  width: 100%;
+  object-fit: cover; /* This will ensure the image covers the area without being stretched */
+  flex-grow: 1;
+  border-radius: 1px;
+  margin-bottom: 5px;
+}
+
+
+.coming-soon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-text {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.enter-game-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0; /* Botões sem bordas arredondadas */
+  border: none;
+  margin-top: auto; /* Push the button to the bottom */
+  padding: 10px 30px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enter-game-button::before {
+  content: '//';
+  max-width: 100%; /* Ensures the button does not exceed the width of its parent */
+  box-sizing: border-box; /* Includes padding and border in the element's width and height */
+  overflow: hidden; /* Prevents children from overflowing */
+  background-color: #c0392b; 
+}
+
+.enter-game-button::after {
+  content: '→';
+  margin-left: 8px;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowed content */
+  text-overflow: ellipsis; 
+}
+.enter-game-button:hover {
+  background-color: #e74c3c; /* Escurecer botão ao passar o mouse */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowed content */
+  text-overflow: ellipsis; 
+}
+
+/* Ajusta o padding para dar espaço entre o botão e a parte inferior do card */
+/* Distribute space within the cards */
+.game-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This will push the button to the bottom */
+  height: 100%; /* Force the content to fill the card */
+  padding: 10px;
+}
+
+/* Espaçamento na parte inferior do último card para não colar no menu */
+.game-card:last-child {
+  margin-bottom: 20px;
+}
+
+/* Responsive grid for mobile devices */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust the min-width for smaller screens */
+  }
+
+  .game-card {
+    min-height: auto; /* Allows the card to grow with the content, avoiding fixed height cropping */
+  }
+  .enter-game-button {
+    padding: 5px 15px; /* Smaller padding on smaller screens */
+    font-size: 14px; /* Smaller font size on smaller screens */
+    /* ... other responsive adjustments ... */
+  }
+}

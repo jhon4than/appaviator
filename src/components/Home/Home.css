@@ -1,0 +1,217 @@
+/* Estilos padrão */
+.background {
+  flex: 1;
+  background-size: cover;
+  background-color: black;
+}
+
+.scrollContainer {
+  flex: 1;
+  overflow-y: auto;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Isso já está correto, mas certifique-se de que não há margens ou padding que afetem a centralização */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
+}
+
+/* Certifique-se de que não há margem desnecessária nos elementos filhos que possa deslocá-los */
+.centerImage, .textContainer, .video {
+  margin: 0 auto; /* Isso centralizará os elementos horizontalmente */
+}
+
+.textContainer {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for modern look */
+  color: #FFFFFF; /* White text for contrast */
+  border-radius: 15px;
+  padding: 20px; /* More padding for better spacing */
+  margin: 20px 0; /* Space above and below the container */
+  max-width: 500px; /* Maximum width for larger screens */
+  width: 100%; /* Responsive width */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  text-align: center; /* Center align the text */
+  transition: all 0.3s ease; /* Transition for hover effects */
+}
+
+.welcomeText {
+  font-size: 2rem; /* Larger font size for the main greeting */
+  font-weight: bold;
+  margin-bottom: 10px; /* Space between the greeting and description */
+}
+
+.descriptionText {
+  font-size: 1.25rem; /* Adjust the font size as needed */
+  margin-bottom: 15px; /* Space before the video prompt */
+}
+
+.videoPrompt {
+  font-size: 1rem;
+  margin-bottom: 20px; /* Space after the prompt */
+  color: #FFD700; /* Gold color for the prompt to make it stand out */
+  font-weight: bold;
+}
+
+/* Hover effect for the container */
+.textContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.video {
+  width: 70%; /* Full width of the parent container */
+  height: auto; /* Height is set automatically to maintain aspect ratio */
+  margin: 0 auto; /* Top and bottom margin with auto for horizontal centering */
+  margin-bottom: 50px; /* Additional bottom margin for spacing */
+  border-radius: 15px; /* Rounded corners for styling */
+  border: 2px solid gold; /* Gold border for a distinctive look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Shadow for depth perception */
+}
+
+
+
+
+/* Add to your existing Home.css file */
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the space between buttons */
+  margin-top: 20px; /* Add some space above the buttons */
+  cursor: pointer;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 10px; /* More pronounced rounded corners */
+  font-size: 18px; /* Larger font size for better readability */
+  font-weight: bold; /* Make the text bold */
+  text-decoration: none; /* Remove underline from anchors */
+  color: white; /* Text color */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Add shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.google-play {
+  background: #34A853; /* Google's brand green or any color you prefer */
+  border: none; /* Remove border */
+}
+
+.app-store {
+  background: #000; /* Apple's brand black or any color you prefer */
+  border: none; /* Remove border */
+}
+
+.download-button img {
+  width: 32px; /* Adjust icon size */
+  height: 32px; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.download-button:hover {
+  transform: translateY(-3px); /* Move the button up slightly on hover */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+.download-icon {
+  width: 1em; /* Matches the size of the text */
+  height: 1em; /* Matches the size of the text */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Add styles for the buttons as well */
+.download-button {
+  /* ... existing styles ... */
+  background-color: #242424; /* Match this with the prompt */
+  color: white; /* Text color */
+}
+
+.install-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px; /* Adjust as necessary */
+  color: white;
+  border-radius: 4px; /* Slight rounding */
+  padding: 10px 20px; /* Adjust padding as necessary */
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .background {
+    /* Ensure the background covers the entire area */
+    background-size: cover;
+  }
+
+  .centerImage {
+    /* Scale the image to fit smaller screens */
+    width: 35%;
+    height: auto;
+  }
+
+  .textContainer {
+    padding: 15px; /* Slightly less padding on smaller screens */
+  }
+
+  .welcomeText {
+    font-size: 1.75rem; /* Slightly smaller font size for the greeting */
+  }
+
+  .descriptionText {
+    font-size: 1rem; /* Smaller font size for description */
+  }
+
+  .videoPrompt {
+    font-size: 0.875rem; /* Smaller font size for the video prompt */
+  }
+
+  .video {
+    /* You can adjust the margin or padding if needed for smaller screens */
+    margin-bottom: 50px; /* Slightly less space on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .centerImage {
+    /* Reduce the size of the logo image even more for very small screens */
+    width: 150px; /* Example size, adjust as needed */
+    height: 150px; /* Maintain the aspect ratio */
+    margin-top: 10px;
+  }
+
+  .textContainer {
+    padding: 10px; /* Even less padding on very small screens */
+  }
+
+  .welcomeText,
+  .descriptionText,
+  .videoPrompt {
+    font-size: 0.875rem; /* Uniform smaller font size for better readability */
+  }
+
+ /* Ajustes para telas menores */
+ .video {
+  margin-bottom: 50px; /* Reduce the bottom margin on very small screens */
+  border-radius: 10px; /* Smaller border radius for a slimmer look */
+}
+
+  /* You might also want to adjust other elements here
+     to make sure they fit well on the screen and are usable.
+     Consider the size of buttons, input fields, and any other interactive elements. */
+}
