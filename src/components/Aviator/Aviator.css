@@ -7,7 +7,9 @@
   min-height: 100vh;
   background-color: black; /* Fundo preto para melhor contraste */
   background-size: cover;
+  background-image: url('../../assets/Design sem nome.png'); /* Substitua pelo caminho da sua imagem */
 }
+
 
 .aviator-container {
   width: 90%;
@@ -15,17 +17,17 @@
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais opaco para melhor contraste */
+  background-color: rgba(0, 0, 0, 0.692); /* Fundo mais opaco para melhor contraste */
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efeito de elevação */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.527); /* Sombra para efeito de elevação */
   color: white; /* Texto branco para melhor legibilidade */
 }
 
 .aviator-logo {
-  width: 200px;
+  width: 300px;
   height: auto;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .aviator-float-box {

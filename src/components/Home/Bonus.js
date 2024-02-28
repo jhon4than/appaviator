@@ -23,7 +23,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://chat.whatsapp.com/E3cOQghtTQ70St511afvFn",
+                "https://chat.whatsapp.com/H9XHtS1JmWb2qDuG4uhLqS",
                 "_blank"
               )
             }
@@ -33,7 +33,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet",
+                "https://primeflix.bet",
                 "_blank"
               )
             }

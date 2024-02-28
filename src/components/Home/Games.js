@@ -108,7 +108,7 @@ function Games() {
       <div className="aviator-container">
         <HeaderLogo />
         <img
-          src={require("../../assets/logoaviator.png")} // Certifique-se de ter uma imagem correspondente
+          src={require("../../assets/aviator (1).jpg")} // Certifique-se de ter uma imagem correspondente
           alt="Aviator"
           className="aviator-logo"
         />
