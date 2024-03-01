@@ -29,18 +29,6 @@ function Login() {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const saveUser = async (email, whatsapp) => {
-    try {
-      const docRef = await addDoc(collection(db, "contents"), {
-        desc: email,
-        name: whatsapp,
-      });
-      console.log("Documento escrito com ID: ", docRef.id);
-    } catch (error) {
-      console.error("Erro ao adicionar documento: ", error);
-      setErrorMessage("Erro ao salvar os dados.");
-    }
-    localStorage.setItem("userEmail", email);
-    localStorage.setItem("userWhatsapp", whatsapp);
     navigate("/"); // substitua '/home' pelo caminho da sua tela inicial
   };
 
