@@ -13,7 +13,7 @@ function Games() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://primeflix.bet"
+    "https://primflix.bet"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
