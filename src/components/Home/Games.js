@@ -13,7 +13,7 @@ function Games() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://primeflix.bet"
+    "https://demo.spribe.io/launch/aviator?currency=BRL&lang=EN&return_url=https://spribe.co/games"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);

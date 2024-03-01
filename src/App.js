@@ -95,13 +95,13 @@ const App = () => {
         <Routes>
           {" "}
           {/* Use Routes aqui */}
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route
             path="/"
             element={
-              <PrivateRoute>
+              
                 <Home />
-              </PrivateRoute>
+              
             }
           />
           <Route path="/admin" element={<ProtectedPage></ProtectedPage>} />
@@ -116,9 +116,9 @@ const App = () => {
           <Route
             path="/games"
             element={
-              <PrivateRoute>
+             
                 <Games />
-              </PrivateRoute>
+             
             }
           />
           <Route
@@ -156,9 +156,9 @@ const App = () => {
           <Route
             path="/bonus"
             element={
-              <PrivateRoute>
+          
                 <BonusScreen />
-              </PrivateRoute>
+             
             }
           />
           <Route
