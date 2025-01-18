@@ -13,7 +13,7 @@ function Games() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://www.betano.bet.br/"
+    "https://superbet.bet.br/registro?utm_source=google&utm_medium=ppc&utm_campaign=ppc-bet-acq-ext-brand_protect_nobonus_newaccount-brand-all-sup&gad_source=1&gbraid=0AAAAA-bk3h7F4xVfiZbEUT7ol8Vz0mkJi&gclid=Cj0KCQiAv628BhC2ARIsAIJIiK-MkBXkxme8cCJLTejmlLMz5bEix5HOWW0hmuj1mvMNtgraCNw_m2EaAh62EALw_wcB"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
