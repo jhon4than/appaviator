@@ -13,7 +13,7 @@ function Aviator() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet"
+    "https://www.betano.bet.br/"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
