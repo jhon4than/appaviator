@@ -65,7 +65,7 @@ function Games() {
       `;
 
       const now = new Date();
-      const limite = new Date(now.getTime() + 3 * 60 * 1000);
+      const limite = new Date(now.getTime() + 5 * 60 * 1000);
       setHoraLimite(limite.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }));
 
       setEntradaStatus(statusMessage.trim());
