@@ -227,6 +227,12 @@
   margin-bottom: 20px;
 }
 
+.hora-limite-texto {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
 /* Responsive grid for mobile devices */
 @media (max-width: 768px) {
   .games-grid {

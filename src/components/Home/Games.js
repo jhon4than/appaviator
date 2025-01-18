@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Games.css"; // Certifique-se de ter um arquivo CSS correspondente
 import HeaderLogo from "../Home/headerLogo";
-// Importe o componente de barra de progresso circular se estiver usando um de terceiros
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -17,6 +16,7 @@ function Games() {
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
+  const [horaLimite, setHoraLimite] = useState(null);
 
   useEffect(() => {
     let intervalId;
@@ -37,11 +37,10 @@ function Games() {
           setContador("03:00");
           setIsButtonDisabled(false);
           setEntradaStatus("🔐 POSSÍVEL FALHA 🔐");
-          clearInterval(intervalId); // Limpar o intervalo quando o contador atingir "00:00"
+          clearInterval(intervalId);
         }
       }, 1000);
     } else if (isTimerActive && contador === "00:00") {
-      // Caso o usuário não tenha clicado em "handleHackearSinal" e o timer tenha atingido "00:00"
       setIsTimerActive(false);
       setContador("03:00");
       setIsButtonDisabled(false);
@@ -51,20 +50,10 @@ function Games() {
     return () => clearInterval(intervalId);
   }, [isTimerActive, contador]);
 
-  // Dentro de um método ou função de componente React
-  const getRandomNumber = () => {
-    // Isso irá gerar 0 ou 1 aleatoriamente
-    const randomIndex = Math.floor(Math.random() * 2);
-    // Com base no índice aleatório, retorna 10 ou 30
-    return randomIndex === 0 ? 10 : 30;
-  };
-
   const handleHackearSinal = () => {
     setIsLoading(true);
     setTimeout(() => {
-      // Gera um número aleatório entre 1.00 e 5.00
       const giros1 = Math.random() * (5.0 - 1.0) + 1.0;
-      // Arredonda para duas casas decimais
       const girosArredondado = giros1.toFixed(2);
 
       const statusMessage = `
@@ -75,28 +64,27 @@ function Games() {
       🌪 Liberado até 3 tentativa
       `;
 
+      const now = new Date();
+      const limite = new Date(now.getTime() + 3 * 60 * 1000);
+      setHoraLimite(limite.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" }));
+
       setEntradaStatus(statusMessage.trim());
       setIsTimerActive(true);
       setIsLoading(false);
       setIsButtonDisabled(true);
-      // Gera uma nova probabilidade de vitória
+
       let probabilidade =
         Math.random() < 0.9 ? Math.random() * 10 + 90 : Math.random() * 100;
       setProbabilidadeVitoria(Math.round(probabilidade));
-      setIsLoading(false);
-      setIsButtonDisabled(true);
-      setIsTimerActive(true);
     }, 9000);
   };
 
-  // Função modificada para retornar a cor baseada na probabilidade de vitória
   const getProbabilidadeColor = (probabilidade) => {
     if (probabilidade > 70) return "#00C851"; // verde
     if (probabilidade >= 45 && probabilidade <= 69) return "#ffbb33"; // laranja
     return "#ff4444"; // vermelho
   };
 
-  // Função modificada para retornar a cor do texto baseada na probabilidade de vitória
   const getProbabilidadeTextColor = (probabilidade) => {
     if (probabilidade > 70) return "green"; // verde
     if (probabilidade >= 45 && probabilidade <= 69) return "orange"; // laranja
@@ -108,7 +96,7 @@ function Games() {
       <div className="aviator-container">
         <HeaderLogo />
         <img
-          src={require("../../assets/aviator (1).jpg")} // Certifique-se de ter uma imagem correspondente
+          src={require("../../assets/aviator (1).jpg")}
           alt="Aviator"
           className="aviator-logo"
         />
@@ -161,10 +149,8 @@ function Games() {
                         value={probabilidadeVitoria}
                         text={`${probabilidadeVitoria}%`}
                         styles={buildStyles({
-                          pathColor:
-                            getProbabilidadeColor(probabilidadeVitoria),
-                          textColor:
-                            getProbabilidadeTextColor(probabilidadeVitoria),
+                          pathColor: getProbabilidadeColor(probabilidadeVitoria),
+                          textColor: getProbabilidadeTextColor(probabilidadeVitoria),
                           textSize: "35px",
                           pathTransitionDuration: 0.5,
                         })}
@@ -172,9 +158,14 @@ function Games() {
                     </div>
                     <div className="probabilidade-info">
                       <p className="probabilidade-texto">{`Probabilidade de Vitória: ${probabilidadeVitoria}%`}</p>
+                      {horaLimite && (
+                        <p className="hora-limite-texto">
+                          ⏰ Tentativas válidas até: {horaLimite}
+                        </p>
+                      )}
                       {probabilidadeVitoria < 45 && (
                         <p className="alerta-probabilidade-baixa">
-                          <br></br>Considere jogar em outro horário.
+                          <br />Considere jogar em outro horário.
                         </p>
                       )}
                     </div>
